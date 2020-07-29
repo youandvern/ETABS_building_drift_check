@@ -5,6 +5,8 @@
 * [Technologies](#technologies)
 * [Project Status](#project-status)
 * [Project Background](#project-background)
+* [Drift Table Demo](#table-demo)
+* [API Tool Demos](#API-demo)
 
 
 ### Purpose
@@ -22,3 +24,9 @@ These programs aim to automate tediuos formatting of drift output from ETABS for
 
 ### Project Background
 This collection of programs was initially developed on a hospital project to speed up the size optimization for lateral system elements. The drift outputs from ETABS can be difficult to use and slow to format so these programs attempt to streamline the process and automate the tedious formatting of ETABS output.
+
+### Drift Table Demo
+![Drift Table Tool Demo](Demos/driftTable_demo.gif)
+
+
+### API Tool Demos
