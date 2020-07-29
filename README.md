@@ -30,6 +30,6 @@ This collection of programs was initially developed on a hospital project to spe
 
 
 ### API Tool Demos
-![Open ETABS Model and Read Drifts Demo](demos/APItool_open_read_demo.gif)__
-![Formatted Excel Results Demo](demos/APItool_excelResults_demo.gif)__
+![Open ETABS Model and Read Drifts Demo](demos/APItool_open_read_demo.gif) <br />
+![Formatted Excel Results Demo](demos/APItool_excelResults_demo.gif) <br />
 ![Use APItool Interactively with ETABS Demo](demos/APItool_interactiveUse_demo.gif)
