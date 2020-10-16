@@ -22,9 +22,8 @@ class pandasModel(QAbstractTableModel):
         return self._data.shape[1]
 
     def data(self, index, role=Qt.DisplayRole):
-        if index.isValid():
-            if role == Qt.DisplayRole:
-                return str(self._data.iloc[index.row(), index.column()])
+        if index.isValid() and role == Qt.DisplayRole:
+            return str(self._data.iloc[index.row(), index.column()])
         return None
 
     def headerData(self, col, orientation, role):
@@ -168,7 +167,7 @@ class EtabsModel:
                 self.SapModel.Results.StoryDrifts(NumberResults, Stories, LoadCases, StepTypes, StepNums, Directions,
                                                   Drifts, Labels, Xs, Ys, Zs)
             # append all drift results to storydrifts list
-            for i in range(0, NumberResults):
+            for i in range(NumberResults):
                 self.StoryDrifts.append((Stories[i], LoadCases[i], Directions[i], Drifts[i], Drifts[i] / dlimit))
 
         # set up pandas data frame and sort by drift column
@@ -467,7 +466,6 @@ class get_model_dialog(QWidget):
             mess_save = 'ETABS file path not found'
 
         self.statustext.setText(mess_save)
-        pass
 
     # function to close current ETABS model
     def closeModel(self):
@@ -482,9 +480,7 @@ class get_model_dialog(QWidget):
         # do stuff
         if self.chosenModel:
             self.closeModel()
-            event.accept()  # let the window close
-        else:
-            event.accept()  # let the window close
+        event.accept()  # let the window close
 
 
 
